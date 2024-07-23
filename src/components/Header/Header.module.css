@@ -1,0 +1,47 @@
+.container {
+  padding: 20px 30px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; 
+  gap: 30px;
+  background-color: rgb(238, 252, 255);
+  min-height: 100vh;
+  
+}
+
+.heading {
+  margin: 0 auto;
+  max-width: 500px;
+  color: #000;
+  font-size: 3.1rem;
+  line-height: 4.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.heading span {
+  background-clip: text;
+  background-image: linear-gradient(to right, #239ce2, #1369b9);
+  color: transparent;
+}
+
+.right img {
+  width: 400px;
+}
+
+.Bresume{
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: #239ce2;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  gap: 5px;
+  cursor: pointer;
+  transform: translateX(200px) translateY(-150px);
+}
