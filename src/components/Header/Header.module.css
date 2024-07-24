@@ -43,5 +43,5 @@
   letter-spacing: 1px;
   gap: 5px;
   cursor: pointer;
-  transform: translateX(200px) translateY(-150px);
+  /* transform: translateX(200px) translateY(-150px); */
 }

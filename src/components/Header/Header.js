@@ -1,12 +1,26 @@
-// head.js
-import React from "react";
-import { Link } from "react-router-dom";
+// Header.js
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../AuthContext";
 import resumeSvg from "../../assets/resume.svg";
 import styles from "./Header.module.css";
 
+
+
 function Header() {
+  const { isAuthenticated } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleBuildResumeClick = () => {
+    
+    if (isAuthenticated) {
+      navigate("/body");
+    } else {
+      alert("Please login first.");
+    }
+  };
+
   return (
-    <>
     <div className={styles.container}>
       <div className={styles.left}>
         <p className={styles.heading}>
@@ -19,12 +33,11 @@ function Header() {
       <div className={styles.right}>
         <img src={resumeSvg} alt="Resume" />
       </div>
-      
+      <button className={styles.Bresume} onClick={handleBuildResumeClick}>
+        Build Resume
+      </button>
+
     </div>
-    <Link to="/body">
-        <button className={styles.Bresume}>Build Resume</button>
-      </Link>
-    </>
   );
 }
 
